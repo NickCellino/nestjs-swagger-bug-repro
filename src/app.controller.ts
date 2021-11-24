@@ -6,10 +6,13 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  /**
+   * This endpoint sends a greeting!
+   */
   @Get()
   getHello(): HelloDto {
     return {
-      greeting: this.appService.getHello()
-    }
+      greeting: this.appService.getHello(),
+    };
   }
 }
